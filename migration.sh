@@ -21,8 +21,8 @@ for i in ${SOURCE_VERSIONS}
 do
     if [ ${i} == ${TARGET_VERSION} ]
     then
-	echo "Only the last version of process definition exists. Exiting..."
-	break
+	echo "Skipping target version..."
+	continue
     fi
     echo "Migration of process definition id: ${i}"
     echo "Generating migration plan..."
